@@ -1,0 +1,52 @@
+{
+    "name": "configuretech/laminas-jms-serializer",
+    "description": "Provides Laminas integration for the jms/serializer library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "jms",
+        "serializer"
+    ],
+    "support": {
+        "issues": "https://github.com/configuretech/laminas-jms-serializer/issues",
+        "source": "https://github.com/configuretech/laminas-jms-serializer",
+        "rss": "https://github.com/configuretech/laminas-jms-serializer/releases.atom"
+    },
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "squizlabs/php_codesniffer": "^3.5",
+        "vimeo/psalm": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Configuretech\\LaminasJmsSerializer\\": "src//"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ConfiguretechTest\\LaminasJmsSerializer\\": "test/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laminas": {
+            "module": "Configuretech\\JmsSerializer",
+            "config-provider": "Configuretech\\JmsSerializer\\ConfigProvider"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "sat-check": "psalm",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+    }
+}
